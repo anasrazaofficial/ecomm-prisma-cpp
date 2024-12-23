@@ -5,6 +5,8 @@ const cloudinary = require('cloudinary')
 
 const userRoutes = require("./routes/user")
 const productRoutes = require("./routes/product")
+const cartRoutes = require("./routes/cart")
+const orderRoutes = require("./routes/order")
 
 const { CLOUD_NAME, CLOUD_API_KEY, CLOUD_API_SECRET } = process.env
 const app = express()
@@ -23,5 +25,7 @@ app.use(fileUpload({
 
 app.use("/api/", userRoutes);
 app.use("/api/product", productRoutes);
+app.use("/api/cart", cartRoutes);
+app.use("/api", orderRoutes);
 
 app.listen(5000, () => console.log(`Server is Listening on 5000`));

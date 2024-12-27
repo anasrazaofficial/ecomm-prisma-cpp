@@ -28,4 +28,16 @@ app.use("/api/product", productRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api", orderRoutes);
 
+// localhost:8080
+
+// ---/api/signup
+// ---/api/login
+
 app.listen(5000, () => console.log(`Server is Listening on 5000`));
+
+// c = Post (create) body
+// r = Get (read) no body
+// u = Put (update) body, id
+// d= Delete (delete) id
+
+// http://localhost:5000/api/signup

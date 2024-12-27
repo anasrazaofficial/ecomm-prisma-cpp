@@ -66,3 +66,13 @@ enum OrderStatus {
   DELIVERED
   CANCELLED
 }
+
+// Pakistan provinces
+// enum Province {
+//   Punjab
+//   Sindh
+//   KPK
+//   Balochistan
+//   Gilgit_Baltistan
+//   Azad_Kashmir
+// }

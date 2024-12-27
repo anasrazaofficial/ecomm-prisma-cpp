@@ -59,3 +59,7 @@ const getCart = async (req, res) => {
 }
 
 module.exports = { addProductsToCart, getCart };
+
+// m=model//user,product,cart,order
+// v=view
+// c=controller//signup, login, addProductsToCart, getCart, placeOrder

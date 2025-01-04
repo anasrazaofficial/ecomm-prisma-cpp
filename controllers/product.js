@@ -1,15 +1,10 @@
 const { PrismaClient } = require('@prisma/client');
-const cloudinary = require('cloudinary');
 
 const prisma = new PrismaClient();
 
 const addProduct = async (req, res) => {
     try {
-        let image = await cloudinary.v2.uploader.upload(req.files.image.tempFilePath,
-            { folder: "ecommerce-store-duet/products" }
-        );
-
-        const payload = { ...req.body, image: image.public_id, price: Number(req.body.price) };
+        const payload = { ...req.body, price: Number(req.body.price) };
         await prisma.product.create({ data: payload });
 
         return res.status(200).json("Product added successfully");

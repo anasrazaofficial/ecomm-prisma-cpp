@@ -6,7 +6,7 @@ const addProductsToCart = async (req, res) => {
         const cart = await prisma.cart.create({ data: {} });
 
         const payload = await Promise.all(
-            req.body.products.map(async (product) => {
+            req.body.map(async (product) => {
                 const productData = await prisma.product.findUnique({
                     where: { id: product.productId },
                     select: { price: true }
